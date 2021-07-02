@@ -37,14 +37,14 @@ public class TicketDAO {
 		System.out.println("TicketDAO 생성자 호출 : "+template);
 	}
 	
-	
+	  
 	// 티켓구매와 결제를 위한 메소드
 	public void buyTicket(final TicketDTO dto) {
-		
-		System.out.println("buyTicket() 메소드호출");
+		   
+		System.out.println("buyTicket() 메소드호출");   
 		System.out.println(dto.getCustomerId()+"님이"+
 				"티켓 "+dto.getAmount()+"장을 구매합니다.");
-		
+		       
 		// DAO에서 트랜잭션 처리를 위한 객체 생성
 		TransactionDefinition def = new DefaultTransactionDefinition();
 		TransactionStatus status = transactionManager.getTransaction(def);
